@@ -1,0 +1,9 @@
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+  <h2>Title:</h2>
+  <p><%= @book.title %></p>
+  <h2>Body:</h2>
+  <p><%= @book.body %></p>
+
+  <th><%= link_to "Edit", edit_book_path(@book.id) %></th> |
+  <th><a class="back" href="/books">Back</a></th>
+<% end %>
