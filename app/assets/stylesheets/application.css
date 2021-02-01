@@ -19,3 +19,16 @@
   box-sizing: border-box;
 }
 
+
+.top {
+  margin: 50px;
+}
+
+.top p {
+  margin: 20px;
+}
+
+th {
+  display: flex;
+  justify-content: center;
+}
