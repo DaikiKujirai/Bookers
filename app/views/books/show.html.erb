@@ -1,5 +1,6 @@
 <p><%= flash[:create] %></p>
 <p><%= flash[:update] %></p>
+
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
   <p>Title:<%= @book.title %></p>
   <p>Body:<%= @book.body %></p>
