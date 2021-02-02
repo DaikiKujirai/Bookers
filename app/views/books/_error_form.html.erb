@@ -1,0 +1,13 @@
+
+　  
+　  <% if @book.errors.any? %>
+      <div id="error_explanation">
+        <h2>2 errors prohibited this book from being saved:</h2>
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+          　<li>Title can't be blank</li>
+          　<li>Body can't be blank</li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>

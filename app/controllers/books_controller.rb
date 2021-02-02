@@ -9,10 +9,14 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(book_params)
-    if book.save
+    @book = Book.new(book_params)
+    if @book.save
       flash[:notice] = "Book was successfully created"
-      redirect_to book_path(book.id)
+      redirect_to book_path(@book.id)
+    else
+      # コントローラを通さないのでここに@booksを定義する
+      @books = Book.all
+      render :index
 # バリデーション対応がしたい。空白の場合動かない。renderがわからない。
 
     end
