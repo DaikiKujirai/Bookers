@@ -1,12 +1,13 @@
 
-　  
 　  <% if @book.errors.any? %>
       <div id="error_explanation">
-        <h2>2 errors prohibited this book from being saved:</h2>
+        <h2 = "error_title"><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+       <!--エラーの数を数える-->
         <ul>
           <% @book.errors.full_messages.each do |message| %>
-          　<li>Title can't be blank</li>
-          　<li>Body can't be blank</li>
+          　<li><%= message %></li>
+          　<!--エラー文は自動で作られる-->
+
           <% end %>
         </ul>
       </div>
