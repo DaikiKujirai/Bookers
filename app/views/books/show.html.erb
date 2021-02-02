@@ -1,11 +1,8 @@
-<% if flash[:notice] %>
-  <p><%= flash[:notice] %></p>
-<% end %>
+<p><%= flash[:create] %></p>
+<p><%= flash[:update] %></p>
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
-  <h2>Title:</h2>
-  <p><%= @book.title %></p>
-  <h2>Body:</h2>
-  <p><%= @book.body %></p>
+  <p>Title:<%= @book.title %></p>
+  <p>Body:<%= @book.body %></p>
 
   <th><%= link_to "Edit", edit_book_path(@book.id) %></th> |
   <th><a class="back" href="/books">Back</a></th>
