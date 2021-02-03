@@ -31,7 +31,7 @@
       <%= f.text_field :title %>
       <h4>Body</h4>
       <%= f.text_area :body %>
-      <p><%= button_to "Create Book", {controller: 'books', action: 'index'}, {method: :get} %></p>
+      <p><%= f.submit "Create Book" %></p>
     <% end %>
   </body>
 </html>

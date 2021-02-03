@@ -6,7 +6,7 @@
   <h4>Body</h4>
   <%= f.text_area :body %>
 
-  <p><%= button_to "Update Book", {controller: 'books', action: 'update'}, {method: :get} %></p>
+  <p><%= f.submit "Update Book" %></p>
 
   <th><%= link_to "show", book_path(@book.id) %></th> |
   <th><a class="back" href="/books">Back</a></th>
